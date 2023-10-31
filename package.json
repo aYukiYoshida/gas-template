@@ -1,0 +1,52 @@
+{
+  "name": "gas-template",
+  "version": "1.0.0",
+  "description": "Template for Google Apps Script",
+  "scripts": {
+    "prepare": "npm-run-all prepare:*",
+    "prepare:husky": "husky install",
+    "lint": "eslint **/*.ts --fix",
+    "format": "prettier **/*.ts --write",
+    "login": "clasp login --status",
+    "create": "clasp create --rootDir src",
+    "clone": "clasp clone --rootDir src",
+    "open": "clasp open -P src/.clasp.json",
+    "prepush": "npm run lint && npm run format",
+    "push": "clasp push -P src/.clasp.json",
+    "pull": "clasp pull -P src/.clasp.json",
+    "invoke": "clasp run -P src/.clasp.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aYukiYoshida/gas-template.git"
+  },
+  "keywords": [
+    "GAS"
+  ],
+  "author": "Yuki Yoshida <yuki.yoshida@access-company.com> (https://ayukiyoshida.github.io/tips/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aYukiYoshida/gas-template/issues"
+  },
+  "homepage": "https://github.com/aYukiYoshida/gas-template#readme",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.76",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
