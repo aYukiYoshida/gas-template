@@ -135,3 +135,6 @@ Footer
 
 # clasp
 .clasp.json
+
+# mise
+.mise.toml
