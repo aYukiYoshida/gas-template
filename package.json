@@ -16,6 +16,10 @@
     "prepush": "npm run build",
     "push": "clasp push -P public/.clasp.json",
     "pull": "clasp pull -P public/.clasp.json",
+    "version": "clasp version -P public/.clasp.json",
+    "list-versions": "clasp versions -P public/.clasp.json",
+    "deploy": "clasp deploy -P public/.clasp.json",
+    "list-deployments": "clasp deployments -P public/.clasp.json",
     "invoke": "clasp run -P public/.clasp.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
