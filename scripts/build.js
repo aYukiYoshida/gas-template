@@ -4,7 +4,8 @@ import { Command } from "commander";
 
 const buildApp = () => {
   build({
-    entryPoints: ['src/app.ts'],
+    entryPoints: ['srt/app.ts'],
+    charset: 'utf8',
     bundle: true,
     outfile: 'public/app.js',
     plugins: [GasPlugin]

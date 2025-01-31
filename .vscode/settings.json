@@ -1,0 +1,17 @@
+{
+    "eslint.workingDirectories": [
+        "src"
+    ],
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    "cSpell.words": [
+        "appsscript",
+        "claspignore"
+    ]
+}
