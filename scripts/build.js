@@ -4,7 +4,7 @@ import { Command } from "commander";
 
 const buildApp = () => {
   build({
-    entryPoints: ['srt/app.ts'],
+    entryPoints: ['src/app.ts'],
     charset: 'utf8',
     bundle: true,
     outfile: 'public/app.js',
