@@ -22,7 +22,7 @@
     "deploy": "clasp deploy -P public/.clasp.json",
     "list-deployments": "clasp deployments -P public/.clasp.json",
     "invoke": "clasp run -P public/.clasp.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jest.config.js"
   },
   "type": "module",
   "repository": {
@@ -41,6 +41,7 @@
   "devDependencies": {
     "@google/clasp": "^2.4.2",
     "@types/google-apps-script": "^1.0.76",
+    "@types/jest": "^29.5.14",
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
@@ -49,12 +50,14 @@
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
+    "jest": "^29.7.0",
     "lint-staged": "^15.0.2",
     "npm-failsafe": "^1.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "rimraf": "^6.0.1",
-    "typescript": "^5.2.2"
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
   },
   "lint-staged": {
     "**/*.ts": [
