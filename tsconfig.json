@@ -112,8 +112,8 @@
   },
   "include": [
     "src/*.ts",
+    "test/*.ts",
     "scripts/*.js",
-    "node_modules/@types/google-apps-script",
-    "node_modules/@types/node"
+    "node_modules/@types",
   ]
 }
