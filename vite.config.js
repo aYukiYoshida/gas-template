@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import path from "path";
 import { defineConfig } from "vite";
 import typescript from "@rollup/plugin-typescript";
@@ -24,5 +25,9 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  test: {
+    globals: true,
+    environment: "node",
   },
 });
