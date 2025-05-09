@@ -1,9 +1,11 @@
+import { describe, it, vi } from "vitest";
+
 import functions from "../src/functions";
 
 global.Logger = {
-  log: jest.fn(),
-  clear: jest.fn(),
-  getLog: jest.fn(),
+  log: vi.fn(),
+  clear: vi.fn(),
+  getLog: vi.fn(),
 };
 
 describe("functions", () => {
