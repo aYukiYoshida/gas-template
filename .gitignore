@@ -89,7 +89,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -134,8 +133,8 @@ Footer
 .node-version
 
 # clasp
-public/
-!public/appsscript.json
-!public/.claspignore
+dist/*
+!dist/appsscript.json
+!dist/.claspignore
 
 !.vscode
