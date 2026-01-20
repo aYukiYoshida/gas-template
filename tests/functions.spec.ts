@@ -1,4 +1,4 @@
-import { describe, it, vi } from "vitest";
+import {describe, it, vi} from "vitest";
 
 import functions from "../src/functions";
 
