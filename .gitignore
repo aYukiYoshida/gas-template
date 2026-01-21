@@ -132,9 +132,5 @@ Footer
 # nodenv
 .node-version
 
-# clasp
+# clasp build output
 dist/*
-!dist/appsscript.json
-!dist/.claspignore
-
-!.vscode
