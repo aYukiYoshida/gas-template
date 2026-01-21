@@ -1,12 +1,18 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 import path from "path";
-import { defineConfig } from "vite";
+import {defineConfig} from "vite";
 import typescript from "@rollup/plugin-typescript";
-import rollupPluginGas from "rollup-plugin-google-apps-script";
+import gas from "./plugins";
 
 export default defineConfig({
   plugins: [
-    rollupPluginGas(),
+    gas({
+      manifest: {
+        copy: true,
+        filepath: path.join("src", "appsscript.json"),
+      },
+      verbose: true,
+    }),
     typescript(),
   ],
   build: {
@@ -15,12 +21,13 @@ export default defineConfig({
       output: {
         dir: "dist",
         entryFileNames: "main.js",
-        emptyOutDir: false,
-      }
+      },
     },
     emptyOutDir: false,
     minify: false, // trueにすると関数名が消えるのでfalse必須
+    target: "esnext",
   },
+  esbuild: false,
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

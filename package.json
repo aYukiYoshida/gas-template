@@ -50,6 +50,7 @@
     "@typescript-eslint/parser": "^8.32.0",
     "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.1.5",
+    "gas-entry-generator": "^3.0.0",
     "globals": "^16.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.0.2",
@@ -57,7 +58,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "rimraf": "^6.0.1",
-    "rollup-plugin-google-apps-script": "^2.0.2",
+    "rollup": "^4.55.2",
+    "rollup-pluginutils": "^2.8.2",
     "typescript": "^5.7.3",
     "vitest": "^3.1.3"
   },
