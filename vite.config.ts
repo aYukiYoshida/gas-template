@@ -1,7 +1,9 @@
 /// <reference types="vitest/config" />
 import path from "path";
-import {defineConfig} from "vite";
+
 import typescript from "@rollup/plugin-typescript";
+import {defineConfig} from "vite";
+
 import gas from "./plugins";
 
 export default defineConfig({
