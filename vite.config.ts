@@ -4,7 +4,7 @@ import path from "path";
 import typescript from "@rollup/plugin-typescript";
 import {defineConfig} from "vite";
 
-import gas from "./plugins";
+import gas from "./plugins/index.ts";
 
 export default defineConfig({
   plugins: [
@@ -30,10 +30,10 @@ export default defineConfig({
     target: "esnext",
     sourcemap: true,
   },
-  esbuild: false,
+  oxc: false,
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
   test: {
